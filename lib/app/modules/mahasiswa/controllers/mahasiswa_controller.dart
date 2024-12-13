@@ -33,6 +33,7 @@ class MahasiswaController extends GetxController {
           onConfirm: () {
             cNpm.clear();
             cNama.clear();
+            cAlamat.clear(); 
             Get.back();
             Get.back();
             textConfirm:
@@ -76,6 +77,7 @@ class MahasiswaController extends GetxController {
         onConfirm: () {
           cNpm.clear();
           cNama.clear();
+          cAlamat.clear();
           Get.back();
           Get.back();
         },

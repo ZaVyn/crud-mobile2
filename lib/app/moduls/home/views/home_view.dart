@@ -67,7 +67,11 @@ class _DashboardAdminState extends State<DashboardAdmin> {
             Get.to(_fragment[_index]
             ["add"]);
           },
-          icon: Icon(Icons.add_circle_outline_outlined),
+          icon: Icon(
+            Icons.add_box_rounded,
+            size: 35,
+            color: Colors.white,
+            ),
           )
         ],
       ),
@@ -75,21 +79,23 @@ class _DashboardAdminState extends State<DashboardAdmin> {
     );
   }
   Widget drawer() {
+   
     return Drawer(
       child: ListView(
         children: [
           DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.deepPurpleAccent,
+                color: Colors.blueAccent,
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Icon(
-                    Icons.account_circle,
-                    size: 80,
-                    color: Colors.white,
+                children: const[
+                  CircleAvatar(
+                    radius: 44,
+                    backgroundImage: NetworkImage(
+                      'https://thumb.tvonenews.com/thumbnail/2024/09/19/66eb952c3f16d-ishowspeed-kenakan-seragam-timnas-indonesia_1265_711.jpg'
+                    ),
                   ),
                   Text(
                     "Aqgit Ariya Kusuma",
@@ -118,8 +124,8 @@ class _DashboardAdminState extends State<DashboardAdmin> {
             leading: Icon(Icons.dashboard),
             title: Text('Dashboard'),
             trailing: Icon(Icons.navigate_next),
-            iconColor: Colors.deepPurpleAccent,
-            textColor: Colors.deepPurpleAccent,
+            iconColor: Colors.black,
+            textColor: Colors.black,
           ),
           ListTile(
             onTap: () {
@@ -129,8 +135,8 @@ class _DashboardAdminState extends State<DashboardAdmin> {
             leading: Icon(Icons.people),
             title: Text('Data Mahasiswa'),
             trailing: Icon(Icons.navigate_next),
-            iconColor: Colors.deepPurpleAccent,
-            textColor: Colors.deepPurpleAccent,
+            iconColor: Colors.black,
+            textColor: Colors.black,
           ),
           ListTile(
             onTap: () {
@@ -140,8 +146,8 @@ class _DashboardAdminState extends State<DashboardAdmin> {
             leading: Icon(Icons.people),
             title: Text('Data Dosen'),
             trailing: Icon(Icons.navigate_next),
-            iconColor: Colors.deepPurpleAccent,
-            textColor: Colors.deepPurpleAccent,
+            iconColor: Colors.black,
+            textColor: Colors.black,
           ),
           ListTile(
             onTap: () {
@@ -151,9 +157,12 @@ class _DashboardAdminState extends State<DashboardAdmin> {
             leading: Icon(Icons.people),
             title: Text('Data Pegawai'),
             trailing: Icon(Icons.navigate_next),
-            iconColor: Colors.deepPurpleAccent,
-            textColor: Colors.deepPurpleAccent,
+            iconColor: Colors.black,
+            textColor: Colors.black,
           ),
+          const Divider(
+            color: Colors.black54,
+            ),
           ListTile(
             onTap: () {
               Get.back();
@@ -162,8 +171,8 @@ class _DashboardAdminState extends State<DashboardAdmin> {
             leading: Icon(Icons.logout),
             title: Text('Logout'),
             trailing: Icon(Icons.navigate_next),
-            iconColor: Colors.deepPurpleAccent,
-            textColor: Colors.deepPurpleAccent,
+            iconColor: Colors.black,
+            textColor: Colors.black,
           ),
         ],
       ),
